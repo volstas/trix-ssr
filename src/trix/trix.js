@@ -22,7 +22,7 @@ export default {
       import("trix/operations"),
       import("trix/filters"),
       import("trix/elements")
-    ]);
+    ])
 
     const Trix = {
       VERSION: version,
@@ -35,25 +35,24 @@ export default {
       operations,
       elements,
       filters
-    };
+    }
 
     // Expose models under the Trix constant for compatibility with v1
-    Object.assign(Trix, models);
+    Object.assign(Trix, models)
 
-    window.Trix = Trix;
+    window.Trix = Trix
 
     function start() {
-      console.log('Defining custom elements');
       if (!customElements.get("trix-editor")) {
-        customElements.define("trix-editor", elements.TrixEditorElement);
+        customElements.define("trix-editor", elements.TrixEditorElement)
       }
 
       if (!customElements.get("trix-toolbar")) {
-        customElements.define("trix-toolbar", elements.TrixToolbarElement);
+        customElements.define("trix-toolbar", elements.TrixToolbarElement)
       }
     }
 
-    setTimeout(start, 0);
-    return Trix;
+    setTimeout(start, 0)
+    return Trix
   }
 }

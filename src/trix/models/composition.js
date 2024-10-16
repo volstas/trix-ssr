@@ -358,8 +358,8 @@ export default class Composition extends BasicObject {
     const [ startPosition, endPosition ] = Array.from(selectedRange)
     if (startPosition === endPosition) {
       if (attributeName === "href") {
-        const withoutHttp = value.replace(/^https?:\/\//, "");
-        const withoutMailto = withoutHttp.replace(/^mailto:/, "");
+        const withoutHttp = value.replace(/^https?:\/\//, "")
+        const withoutMailto = withoutHttp.replace(/^mailto:/, "")
         const text = Text.textForStringWithAttributes(withoutMailto, { href: value })
         return this.insertText(text)
       }
@@ -578,7 +578,7 @@ export default class Composition extends BasicObject {
         endPosition = this.translateUTF16PositionFromOffset(endPosition, 1)
       }
     }
-    return normalizeRange([startPosition, endPosition])
+    return normalizeRange([ startPosition, endPosition ])
   }
 
   shouldManageMovingCursorInDirection(direction) {

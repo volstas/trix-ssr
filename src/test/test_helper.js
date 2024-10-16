@@ -14,7 +14,7 @@ export * from "./test_helpers/toolbar_helpers"
 export * from "./test_helpers/selection_helpers"
 
 (async () => {
-  await TrixInit.init();
+  await TrixInit.init()
   Trix.config.undo.interval = 0
   QUnit.config.hidepassed = true
   QUnit.config.testTimeout = 20000
@@ -30,5 +30,5 @@ export * from "./test_helpers/selection_helpers"
     #qunit { position: relative !important; }
   </style>`
   )
-})();
+})()
 
