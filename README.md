@@ -1,12 +1,12 @@
 This is a fork from [basecamp/trix](https://github.com/basecamp/trix)
+
 Created this to solve a few issues for my use case.
 
-1. Before, just importing the code would immediately execute everything, which made it impossible to use with SSR enabled. With this, after you import you need to run execute the init() function for the rest of the code to be imported and executed. So you are in full control when trix code actually runs. Additionally this improves performance as the files are chunked and imported in parallel.
+1. Before, just importing the code would immediately execute everything, which made it impossible to use with SSR enabled. With this, after you import you need to run the init() function for the rest of the code to be imported and executed. So you are in full control when trix code actually runs. Additionally this improves performance as the files are chunked and imported in parallel.
 2. Now you can add attributes to the elements, e.g. I needed all my links to open in a new tab, so you can now add Trix.textAttributes.href.attributes = {target: "_blank"}, which will add a target="_blank" attribute for all links. Note that this is set for an entire document and is still not user controllable. Technically you could implement dynamically changing the config value based on user input, which works, but it if you use undo/redo it will be reset to latest config value.
 3. Now when adding a link, if you didn't preselect text, it will use the link without protocol as text. So e.g. before https://example.com would be rendered as that, but now it is example.com that links to https://example.com
 4. Now the protocol is not required for linking, e.g. input of example.com will link to https://example.com, and example@email.com will link to mailto:example@email.com
-
-There's more things I want to change, especially around the links logic.
+5. Fixed a bug where the toolbar would show up as default even when there's a custom toolbar set, specifically solves the need for this hack https://dev.to/konnorrogers/modifying-the-default-toolbar-in-trix-411b
 
 Original docs:
 
