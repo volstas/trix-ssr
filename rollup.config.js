@@ -13,12 +13,12 @@ const banner = `/*\nTrix ${version}\nCopyright © ${year} 37signals, LLC\n */`
 const plugins = [
   json(),
   includePaths({
-    paths: ["src"],
-    extensions: [".js"]
+    paths: [ "src" ],
+    extensions: [ ".js" ]
   }),
-  nodeResolve({ extensions: [".js"] }),
+  nodeResolve({ extensions: [ ".js" ] }),
   commonjs({
-    extensions: [".js"]
+    extensions: [ ".js" ]
   }),
   babel({ babelHelpers: "bundled" }),
 ]

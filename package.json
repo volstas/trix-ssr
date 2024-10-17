@@ -1,7 +1,7 @@
 {
-  "name": "@ernestasTheDev/trix-ssr",
+  "name": "@ernestasTheDev/trix",
   "version": "2.1.6",
-  "description": "A rich text editor for everyday writing",
+  "description": "A fork from basecamp/trix, adding controlled initialization and link related improvements",
   "main": "dist/trix.esm.min/trix.js",
   "module": "dist/trix.esm.min/trix.js",
   "style": "dist/trix.css",
@@ -18,12 +18,13 @@
   "keywords": [
     "rich text",
     "wysiwyg",
-    "editor"
+    "editor",
+    "ssr"
   ],
   "author": "37signals, LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/basecamp/trix/issues"
+    "url": "https://github.com/volstas/trix-ssr/issues"
   },
   "homepage": "https://trix-editor.org/",
   "devDependencies": {
@@ -61,7 +62,7 @@
     "build": "yarn run build-js && yarn run build-css && yarn run build-assets",
     "watch": "rollup -c -w",
     "lint": "eslint .",
-    "pretest": "yarn run build",
+    "pretest": "yarn run lint && yarn run build",
     "test": "karma start",
     "prerelease": "yarn version && yarn test",
     "release": "npm adduser && npm publish",
