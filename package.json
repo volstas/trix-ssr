@@ -1,5 +1,5 @@
 {
-  "name": "@ernestasTheDev/trix",
+  "name": "@ernestasthedev/trix",
   "version": "2.1.6",
   "description": "A fork from basecamp/trix, adding controlled initialization and link related improvements",
   "main": "dist/trix.esm.min/trix.js",
