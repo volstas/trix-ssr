@@ -1,6 +1,6 @@
 This is a fork from [basecamp/trix](https://github.com/basecamp/trix)
 
-Created this to solve a few issues for my use case.
+Created this to solve a few issues for my use case. Specifically when working on [eventoor](https://eventoor.com), I needed to make it work nicer with SSR enabled svelte kit. And I needed better control over link inputs.
 
 1. Before, just importing the code would immediately execute everything, which made it impossible to use with SSR enabled. With this, after you import you need to run the init() function for the rest of the code to be imported and executed. So you are in full control when trix code actually runs. Additionally this improves performance as the files are chunked and imported in parallel.
 2. Now you can add attributes to the elements, e.g. I needed all my links to open in a new tab, so you can now add Trix.textAttributes.href.attributes = {target: "_blank"}, which will add a target="_blank" attribute for all links. Note that this is set for an entire document and is still not user controllable. Technically you could implement dynamically changing the config value based on user input, which works, but it if you use undo/redo it will be reset to latest config value.
