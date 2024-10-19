@@ -450,6 +450,7 @@ export default class TrixEditorElement extends HTMLElement {
 
   set value(defaultValue) {
     this.defaultValue = defaultValue
+    this.inputElement.dispatchEvent(new Event('input', { bubbles: true }))
     this.editor?.loadHTML(this.defaultValue)
   }
 
