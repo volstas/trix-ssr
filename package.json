@@ -1,6 +1,6 @@
 {
   "name": "@ernestasthedev/trix",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "A fork from basecamp/trix, adding controlled initialization and link related improvements",
   "module": "dist/trix.esm.min/trix.js",
   "style": "dist/trix.css",
@@ -9,7 +9,8 @@
     "dist/*.js",
     "dist/*.map",
     "dist/trix.esm.min/*.js",
-    "src/{inspector,trix}/*.js"
+    "src/{inspector,trix}/*.js",
+    "index.d.ts"
   ],
   "type": "module",
   "repository": {

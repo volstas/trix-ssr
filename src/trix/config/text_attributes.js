@@ -17,6 +17,14 @@ export default {
       return style.fontStyle === "italic"
     },
   },
+  underline: {
+    tagName: "u",
+    inheritable: true,
+    parser(element) {
+      const style = window.getComputedStyle(element)
+      return style.textDecoration === "underline"
+    },
+  },
   href: {
     groupTagName: "a",
     attributes: { target: "_blank" },

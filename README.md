@@ -7,6 +7,12 @@ Created this to solve a few issues for my use case. Specifically when working on
 3. Now when adding a link, if you didn't preselect text, it will use the link without protocol as text. So e.g. before https://example.com would be rendered as that, but now it is example.com that links to https://example.com
 4. Now the protocol is not required for linking, e.g. input of example.com will link to https://example.com, and example@email.com will link to mailto:example@email.com
 5. Fixed a bug where the toolbar would show up as default even when there's a custom toolbar set, specifically solves the need for this hack https://dev.to/konnorrogers/modifying-the-default-toolbar-in-trix-411b
+6. Now when trix-editor is bound to an input, the input will emit an 'input' event whenever it is programmatically changed. This fixes reactivity in modern frameworks, allowing you to bind to the inputs value.
+7. Added some simple types definitions for typescript environment imports. Might publish full types to separate @types package at some point.
+8. Added underline formatting support.
+
+Currently the css built from this is likely broken, the original package was using long deprecated node-sass package that did not work with JavaScript modules.
+I upgraded this to use the Dart Sass package but did not port the custom functions logic. It should be completely fine to use the css from the original package or just use your own. e.g. I do not important pacakge css and use tailwind.
 
 Original docs:
 
