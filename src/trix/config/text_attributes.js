@@ -22,7 +22,8 @@ export default {
     inheritable: true,
     parser(element) {
       const style = window.getComputedStyle(element)
-      return style.textDecoration === "underline"
+      const link = element.closest("a")
+      return style.textDecoration === "underline" && !link
     },
   },
   href: {
